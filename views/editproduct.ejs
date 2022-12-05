@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <%- include('./partials/header.ejs');%>
+	<title>form</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<style type="text/css">
+		.container{
+			margin-top: 8%;
+			border: ridge 1.5px white;
+			padding: 20px;
+		}
+		
+	</style>
+</head>
+<body>
+	<div>
+		
+	</div>
+	<div class="container">
+		<h2>Edit product </h2>
+	<form action="/editproduct1/<%=prodata.id%>" method="post">
+		<div class="form-group">
+    <label for="firstname">Name</label>
+    <input type="text" class="form-control" id="product_name" name="name"  value="<%=prodata.name%>">
+  </div>
+
+  <div class="form-group">
+    <label for="firstname">Image url</label>
+    <input type="url" class="form-control" id="product_imag" name="imag"  value="<%=prodata.imag%>">
+	<!-- <input type="url" id="product_imag" name="imag"  class="input-xlarge"> -->
+  </div>
+
+
+  <div class="form-group">
+    <label for="lastname">Price</label>
+    <input type="text" class="form-control" id="product_price" name="price" value="<%=prodata.price%>">
+  </div>
+  <div class="form-group">
+    <label for="phoneno">Quantity</label>
+    <input type="text" class="form-control" id="product_quantity" name="quantity" value="<%=prodata.quantity%>">
+  </div>
+  <div class="form-group">
+    <label for="Email1">Description</label>
+    <input type="text" class="form-control" id="product_desc" aria-describedby="emailHelp" name="description" value="<%=prodata.description%>">
+  </div>
+  
+  <button type="submit" class="btn btn-primary" name="create">Edit</button>
+</form>
+</div>
+</body>
+</html>
